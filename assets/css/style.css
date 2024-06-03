@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 :root {
-    --color-1: rgb(0, 2, 53);
+    --color-1: rgb(1, 3, 60);
     --color-2: rgb(255, 255, 255);
     --color-3: rgb(149, 219, 245);
     --color-4: rgb(165, 226, 25);
@@ -28,6 +28,10 @@ html {
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+}
+
+h1, h2 , h3 , h4 , h5 p{
+    font-family: inter;
 }
 
 .backcolor {
@@ -122,12 +126,14 @@ a {
     padding-top: 130px;
     position: relative;
     height: 100vh;
+    overflow: hidden;
 }
 
-.responsive-iframe{
+.responsive-iframe {
     width: 1000px;
     height: 500px;
 }
+
 .anim {
     display: block;
     margin: auto;
@@ -179,35 +185,25 @@ a {
     scale: 1.06;
 }
 
-/* .uper-bg {
-    aspect-ratio: 2.346820809248555 / 1;
-    background-color: var(--token-8d6d3b89-767b-442f-9e58-976a9d3d131f, #000235);
-    border-radius: 100%;
-    bottom: -540px;
-    box-shadow: inset 0 2px 20px #fff, 0 -10px 50px 1px #ffffff7d;
-    flex: none;
-    width: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-} */
-
 .cover-bg {
-    background-color: var(--color-1);
+    background: linear-gradient(180deg, var(--color-1) 0%, var(--color-1) 70%, var(--color-1) 100%);
     z-index: 4;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 100%;
+    color: #ffffff;
 }
 
 .moving-list {
     display: flex;
     overflow-x: hidden;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     color: #00c6ff;
     width: 200%;
+   
     list-style: none;
     mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 0) 0%,
@@ -219,8 +215,18 @@ a {
     will-change: transform;
 }
 
+@keyframes logoloop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .moving-list:hover {
-    animation: logoloop 80s linear infinite;
+    animation: logoloop 40s linear infinite;
 }
 
 .moving-list>li {
@@ -229,17 +235,16 @@ a {
     flex: 0 0 auto;
     text-align: center;
     padding: 10px;
+    overflow: hidden;
 }
 
 .moving-list>li::before {
-    content: "| ";
+    content: "|";
     margin: 0px 20px;
 }
 
 .box {
-    background: linear-gradient(180deg, rgb(2, 6, 120) 0%, var(--token-8d6d3b89-767b-442f-9e58-976a9d3d131f, rgb(0, 2, 53))
-        /* {"name":"Dark"} */
-        100%);
+    background: linear-gradient(180deg, rgb(2, 6, 120) 0%, var(--token-8d6d3b89-767b-442f-9e58-976a9d3d131f, rgb(0, 2, 53)) 100%);
     width: 100%;
     opacity: 1;
     transform: perspective(1200px);
@@ -247,6 +252,11 @@ a {
     padding: 30px 24px;
     overflow: hidden;
     cursor: pointer;
+
+}
+
+img {
+    object-fit: cover;
 }
 
 .box::before {
@@ -255,20 +265,21 @@ a {
     filter: blur(45px);
     width: 100%;
     height: 76px;
-    left: calc(49.86486486486486% - 257px / 2);
+    left: 0px;
     position: absolute;
     bottom: 0px;
-    width: 257px;
+    width: 100%;
 
 }
 
 .box::after {
     content: '';
     height: 3px;
-    left: calc(46.08108108108108% - 343px / 2);
+    left: 25px;
     position: absolute;
     bottom: 0px;
-    width: 343px;
+    width: 80%;
+
     background: linear-gradient(90deg, rgba(160, 224, 13, 0) 0%, var(--token-c5f1da1f-e558-4012-bcfa-0c426f51b0a3, rgb(149, 219, 245))
         /* {"name":"Main color"} */
         52.85966992378235%, rgba(160, 224, 13, 0) 100%);
@@ -299,25 +310,163 @@ a {
 }
 
 .feature-title {
-    font-size: 60px;
+    font-size: 50px;
+    line-height: 60px;
     text-align: start;
 }
 
-@keyframes logoloop {
+.mask {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    mask-image: linear-gradient(rgba(11, 10, 10, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+}
+.h{
+    position: relative;
+    overflow: hidden;
+    height:auto;
+    mask-image: linear-gradient(rgba(11, 10, 10, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
+  
+}
+
+
+.box-items {
+    animation: lolopopo 10s linear infinite;
+    animation-play-state: running;
+    will-change: transform;
+
+}
+
+
+@keyframes lolopopo {
     0% {
-        transform: translateX(0);
+        transform: translateY(0);
     }
 
     100% {
-        transform: translateX(-50%);
+        transform: translateY(-50%);
     }
 }
 
-/* @media screen and (max-width: 1024px) {
-    .hide {
-        display: none;
+.box-items2 {
+    animation: lolopopo2 10s linear infinite;
+    animation-play-state: running;
+    will-change: transform;
+
+}
+
+
+@keyframes lolopopo2 {
+    0% {
+        transform: translateY(-50%);
     }
-} */
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+.t-heading {
+    color: white;
+    font-weight: 800
+}
+
+.w-box{
+    width: 400px;
+    margin: 0 auto;
+}
+.moving-list2{
+    animation: lolopopo3 20s linear infinite;
+    animation-play-state: running;
+    will-change: transform;
+
+}
+@keyframes lolopopo3 {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+.btn-link {
+    color: #ffffff;
+}
+.btn-link:hover {
+    text-decoration: none;
+}
+.card {
+  
+    background: linear-gradient(180deg, rgb(4, 7, 109) 0%, rgb(0, 2, 53))rgb(0, 2, 53) 100%;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 15px;
+    transform: none;
+    transform-origin: 50% 50% 0px;
+    
+}
+.card-header {
+    background: linear-gradient(-180deg rgb(4, 7, 109) 0%, rgb(0, 2, 53))rgb(0, 2, 53) 100%;
+    border: none;
+}
+.card-body {
+    border: none;
+}
+.btn:focus{
+    box-shadow: none;
+}
+
+.bg-color{
+    background: linear-gradient(180deg, var(--color-15), var( --color-1) 100%);
+}
+
+
+
+/* contact start */
+
+.contact-form{
+    width: 100%;
+    padding:25px 10px;
+    border-radius: 8px;
+    font-family: "Inter ", Inter, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-size: 16px;
+    background: rgb(235, 235, 235);
+    color: rgb(0, 0, 0);
+    box-shadow: transparent 0px 0px 0px 1px inset;
+}
+.form-area{
+    width: 100%;
+    padding: 15px;
+    resize: vertical;
+    min-height: 250px;
+    border-radius: 8px;
+    background: rgb(235, 235, 235);
+    font-family: "Inter Regular", Inter, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    box-shadow: transparent 0px 0px 0px 1px
+}
+.t-btn{
+    background: var(--color-3);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 0px;
+    color: var(--color-1);
+}
+.contact-icon{
+    font-size: 40px;
+    margin: 10px 0px;
+    color: var(--color-3) !important;
+}
+/* contact end */
+
 
 @media screen and (max-width: 1024px) {
     .header {
@@ -376,60 +525,82 @@ a {
     .br {
         border-radius: 5px;
     }
-    .hide{
+
+    .hide {
         display: none;
     }
-    .responsive-iframe{
+
+    .responsive-iframe {
         width: 800px;
         height: 400px;
     }
 }
+
 @media screen and (max-width: 994px) {
-    .responsive-iframe{
+    .responsive-iframe {
         width: 600px;
         height: 300px;
     }
-    .main-title{
+
+    .main-title {
         font-size: 50px;
         text-align: center;
-       line-height: 60px;
+        line-height: 60px;
+    }
+    .w-box{
+        width: 350px;
+        margin: 0 auto;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .responsive-iframe{
+    .responsive-iframe {
         width: 500px;
         height: 300px;
     }
-    .main-title{
+
+    .main-title {
         font-size: 40px;
         text-align: center;
-      line-height:50px ;
+        line-height: 50px;
     }
 }
+
 @media screen and (max-width: 576px) {
 
     .logo-img {
         width: 150px;
     }
-    .responsive-iframe{
-        width: 350px;
+
+    .responsive-iframe {
+        width: 340px;
         height: 200px;
     }
-    .main-title{
+
+    .main-title {
         font-size: 30px;
         text-align: center;
-      line-height:40px ;
+        line-height: 40px;
+    }
+    .w-box{
+        width: 300px;
+        margin: 0 auto;
     }
 }
 
 
 @media screen and (max-width: 340px) {
-    .responsive-iframe{
+    .responsive-iframe {
         width: 200px;
-        height: 100px;
+        height: 200px;
     }
+
     .logo-img {
         width: 150px;
+    }
+    .w-box{
+        width: 350px;
+        margin: 0 auto;
     }
 }
 
