@@ -30,7 +30,11 @@ html {
     font-family: "Inter", sans-serif;
 }
 
-h1, h2 , h3 , h4 , h5 p{
+h1,
+h2,
+h3,
+h4,
+h5 p {
     font-family: inter;
 }
 
@@ -203,7 +207,7 @@ a {
     justify-content: center;
     color: #00c6ff;
     width: 200%;
-   
+
     list-style: none;
     mask-image: linear-gradient(to right,
             rgba(0, 0, 0, 0) 0%,
@@ -321,12 +325,13 @@ img {
     height: 500px;
     mask-image: linear-gradient(rgba(11, 10, 10, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
 }
-.h{
+
+.h {
     position: relative;
     overflow: hidden;
-    height:auto;
+    height: auto;
     mask-image: linear-gradient(rgba(11, 10, 10, 0) 0%, rgb(0, 0, 0) 12.5%, rgb(0, 0, 0) 87.5%, rgba(0, 0, 0, 0) 100%);
-  
+
 }
 
 
@@ -371,16 +376,19 @@ img {
     font-weight: 800
 }
 
-.w-box{
+.w-box {
     width: 400px;
+    padding: 30px 10px;
     margin: 0 auto;
 }
-.moving-list2{
+
+.moving-list2 {
     animation: lolopopo3 20s linear infinite;
     animation-play-state: running;
     will-change: transform;
 
 }
+
 @keyframes lolopopo3 {
     0% {
         transform: translateX(-50%);
@@ -397,41 +405,46 @@ img {
 .btn-link {
     color: #ffffff;
 }
+
 .btn-link:hover {
     text-decoration: none;
 }
+
 .card {
-  
+
     background: linear-gradient(180deg, rgb(4, 7, 109) 0%, rgb(0, 2, 53))rgb(0, 2, 53) 100%;
     max-width: 100%;
     width: 100%;
     border-radius: 15px;
     transform: none;
     transform-origin: 50% 50% 0px;
-    
+
 }
+
 .card-header {
     background: linear-gradient(-180deg rgb(4, 7, 109) 0%, rgb(0, 2, 53))rgb(0, 2, 53) 100%;
     border: none;
 }
+
 .card-body {
     border: none;
 }
-.btn:focus{
+
+.btn:focus {
     box-shadow: none;
 }
 
-.bg-color{
-    background: linear-gradient(180deg, var(--color-15), var( --color-1) 100%);
+.bg-color {
+    background: linear-gradient(180deg, var(--color-15), var(--color-1) 100%);
 }
 
 
 
 /* contact start */
 
-.contact-form{
+.contact-form {
     width: 100%;
-    padding:25px 10px;
+    padding: 25px 10px;
     border-radius: 8px;
     font-family: "Inter ", Inter, Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 400;
@@ -440,7 +453,8 @@ img {
     color: rgb(0, 0, 0);
     box-shadow: transparent 0px 0px 0px 1px inset;
 }
-.form-area{
+
+.form-area {
     width: 100%;
     padding: 15px;
     resize: vertical;
@@ -453,20 +467,96 @@ img {
     color: rgb(0, 0, 0);
     box-shadow: transparent 0px 0px 0px 1px
 }
-.t-btn{
+
+.t-btn {
     background: var(--color-3);
     font-size: 16px;
     font-weight: 700;
     padding: 10px 0px;
     color: var(--color-1);
 }
-.contact-icon{
+
+.contact-icon {
     font-size: 40px;
     margin: 10px 0px;
     color: var(--color-3) !important;
 }
-/* contact end */
 
+/* contact end */
+/* about-us start */
+.para-p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.backimage {
+    background-image: url(../image/backimage.jpg);
+    background-size: cover;
+    background-repeat: center;
+    height: 500px;
+    border-radius: 20px;
+}
+
+.teams {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.blog-img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.blog-title {
+    font-weight: 600;
+    font-size: 50px;
+}
+
+/* about-us end */
+
+/* pricing */
+.price-card {
+    padding: 20px 30px;
+    background: linear-gradient(180deg, #020678 0%, var(--token-8d6d3b89-767b-442f-9e58-976a9d3d131f, rgb(0, 2, 53)) 100%);
+    border-radius: 10px;
+    color: white;
+}
+
+.price-card li {
+    margin: 20px 5px;
+}
+
+.price-card .btn {
+    border-radius: 30px;
+}
+
+.login {
+    background-color: rgb(5, 5, 70);
+    border-radius: 50px
+}
+
+.login-btn {
+    background-color: rgb(30, 41, 59)   ;
+    font-size: 20px;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    border-radius: 50px;
+}
+.login .form-control{
+    padding: 25px 10px;
+    background-color: transparent;
+    border-radius: 20px;
+}
+.login .form-control:focus{
+    box-shadow: none;
+}
+
+/* pricing */
 
 @media screen and (max-width: 1024px) {
     .header {
@@ -534,6 +624,10 @@ img {
         width: 800px;
         height: 400px;
     }
+
+    #bottom-footer {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 994px) {
@@ -547,7 +641,8 @@ img {
         text-align: center;
         line-height: 60px;
     }
-    .w-box{
+
+    .w-box {
         width: 350px;
         margin: 0 auto;
     }
@@ -563,6 +658,11 @@ img {
         font-size: 40px;
         text-align: center;
         line-height: 50px;
+    }
+
+    .blog-title {
+        font-weight: 600;
+        font-size: 40px;
     }
 }
 
@@ -582,10 +682,19 @@ img {
         text-align: center;
         line-height: 40px;
     }
-    .w-box{
+
+    .w-box {
         width: 300px;
         margin: 0 auto;
     }
+
+    /* blog */
+    .blog-img {
+        width: 300px;
+        height: 150px;
+        object-fit: cover;
+    }
+
 }
 
 
@@ -598,7 +707,8 @@ img {
     .logo-img {
         width: 150px;
     }
-    .w-box{
+
+    .w-box {
         width: 350px;
         margin: 0 auto;
     }
